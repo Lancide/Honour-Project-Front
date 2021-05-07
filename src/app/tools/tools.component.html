@@ -1,0 +1,26 @@
+<div class = mainblock>
+  <div class="card card-default">
+    <div class="content-heading">
+      <h2 class = subtitle2>Bioinformatic Tools for sORF and sPEP</h2>
+    </div>
+
+    <div class="card-body">
+      <ngx-datatable class ="bootstrap no-detail-row"
+                     style="height: 700px"
+                     class="material fullscreen"
+                     [rows]="rows"
+                     [columns]="columns"
+                     [headerHeight]="50"
+                     [footerHeight]="50"
+                     [rowHeight]="50"
+                     [scrollbarV]="true"
+                     [scrollbarH]="true"
+                     [columnMode]="columnMode.flex" [trackByProp]="'updated'"
+
+      >
+
+      </ngx-datatable>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<div class = section>
+  <h2 class = subtitle2>
+  Search
+  </h2>
+
+  <div>
+    <app-search-page></app-search-page>
+  </div>
+
+  <div class = subtitle>
+    <h2 class = subtitle2>Results from Search</h2>
+  </div>
+
+  <button class="button btn btn-primary" (click)="clearResult()" class = btn>Clear</button>
+
+  <button (click)="refresh_q()" class = btn> Start New Query</button>
+
+  <angular2csv [data]="data" filename="sPEP_result.csv" > </angular2csv>
+
+
+  <div *ngFor="let d of res; last as isLast">
+    <app-search-result *ngIf="isLast" [resultData]="display"></app-search-result>
+  </div>
+
+</div>
+
+<

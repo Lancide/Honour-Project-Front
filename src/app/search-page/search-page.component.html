@@ -1,0 +1,43 @@
+<form [formGroup]="queryForm" (ngSubmit)="handIn()">
+
+  <div>
+    <label for = "seq">
+      Query Sequence
+    </label>
+<!--    <input id = 'seq' formControlName="seq" type = text>-->
+    <textarea cols="77" rows="7" id = 'seq' formControlName="seq">Type or paste your sequence here.</textarea>
+
+  </div>
+
+
+
+  <div>
+
+
+    <div>
+      <label for ="databases"> Available Databases </label>
+      <select id = "databases" formControlName="databases">
+        <option *ngFor="let db of databases" [ngValue]="databases">
+          {{db.name}}
+        </option>
+      </select>
+
+
+    </div>
+  </div>
+
+  <button class = search_btn>Submit</button>
+
+  <div *ngIf="load">
+    <p>Query Loading...</p>
+    <mat-progress-bar color="blue" mode="query"></mat-progress-bar>
+  </div>
+
+  <div *ngIf="load === false">
+    <p> Your query is submitted.</p>
+  </div>
+
+
+</form>
+
+

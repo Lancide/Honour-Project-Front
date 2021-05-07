@@ -1,0 +1,28 @@
+<!--<div>-->
+<!--  <ngx-datatable [rows]="ros" [columns]="clm"> </ngx-datatable>-->
+<!--</div>-->
+
+<div *ngIf="resultData" class="card card-default">
+  <div class="content-heading">
+    <h2>Result</h2>
+  </div>
+
+  <div class="card-body">
+  <ngx-datatable class ="bootstrap no-detail-row"
+    style="height: 700px"
+    class="material fullscreen"
+    [rows]="resultData.result"
+    [columns]="resultData.columns"
+    [headerHeight]="50"
+    [footerHeight]="50"
+    [rowHeight]="50"
+    [scrollbarV]="true"
+    [scrollbarH]="true"
+    [columnMode]="columnMode.force" [trackByProp]="'updated'"
+
+  >
+
+  </ngx-datatable>
+  </div>
+
+</div>

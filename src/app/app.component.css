@@ -1,0 +1,18 @@
+
+
+.foot {
+  margin-top: 100px;
+  margin-left: 20px;
+  margin-right: 20px;
+  float: bottom;
+  position: sticky;
+  border-top: 1px solid grey;
+}
+
+.contact{
+  color: rgba(50,120, 200, 0.99);
+  font-family: "Calibri", serif;
+  font-size: 12px;
+
+}
+
